@@ -8,7 +8,7 @@
 
 #include "ShippingStatus.h"
 
-ShippingStatus::ShippingStatus() {//default constructor. Will set values to zero on initialization. 
+ShippingStatus::ShippingStatus() {//default constructor. Will set values to zero on initialization. Test commit
 	status_ = "";
 	location_ = "";
 	time_ = 0;
