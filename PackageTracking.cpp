@@ -9,7 +9,10 @@
 #include "PackageTracking.h"
 #include <fstream>
 #include <sstream>
-
+/*!
+this function is the constructor, anything that can have a value is given an initial value because in c++ 
+just because you create a variable doesnt mean it has a meaningful initial value
+*/
 PackageTracking::PackageTracking(const string& strnum) {
 	packageList;
 	total_updates = 0;
@@ -23,6 +26,9 @@ PackageTracking::PackageTracking(const string& strnum) {
 }
 
 // add a new update
+/*!
+this function adds an update to a package tracking information which includes the status location and time updated
+*/
 void PackageTracking::m_addUpdate(const string& status, const string& location, const time_t& timeUpdated) {
 
 	ShippingStatus update2(status, location, timeUpdated);
