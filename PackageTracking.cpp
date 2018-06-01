@@ -62,7 +62,11 @@ bool PackageTracking::m_moveBackward()//move iterator one step earlier in time
 	
 	
 }
-
+/*!
+m_moveforward will more the iterator to what the data we are viewing forward
+this function also has a check to see if we are the end of the list and if so returns that the 
+forward move was incomplete
+*/
 bool PackageTracking::m_moveForward()//move iterator one step forward in time
 {
 	if (currentStatus == total_updates) {
@@ -138,7 +142,9 @@ string PackageTracking::m_getStatus()//return the status of the current update
 
 	return status;
 }
-
+/*!
+m_getnumofupdate will only return the total number of shipping status updates
+*/
 int PackageTracking::m_getNumofUpdate() const // get the total numbers of shipping status updates
 {
 	return total_updates;
