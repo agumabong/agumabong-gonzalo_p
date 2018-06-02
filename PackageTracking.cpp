@@ -45,8 +45,10 @@ void PackageTracking::m_addUpdate(const string& status, const string& location, 
 	}*/
 	
 }
-
-bool PackageTracking::m_moveBackward()//move iterator one step earlier in time
+/*!
+Moves the point in the list one space forward in time. Does not use iterators but increase or decreases a value called currentStatus.
+*/
+bool PackageTracking::m_moveBackward()
 {
 
 	if (currentStatus == 1)
@@ -79,8 +81,11 @@ bool PackageTracking::m_moveForward()//move iterator one step forward in time
 		return true;
 	}
 }
-
-string PackageTracking::m_getLocation()//return the location of the current update
+/*!
+Returns the location of the current update. Grabs the number that currentStatus holds and goes through the list using the number
+that currentStatus holds. After it is done going through the list it returns the value at that location.
+*/
+string PackageTracking::m_getLocation()
 {
 	std::string location_;
 	list<ShippingStatus>::iterator iter = shipList.begin();
@@ -101,6 +106,10 @@ string PackageTracking::m_getLocation()//return the location of the current upda
 
 	return location_;
 }
+/*!
+Returns the time of the current update. Grabs the number that currentStatus holds and goes through the list using the number
+that currentStatus holds. After it is done going through the list it returns the value for the time at that location.
+*/
 
 time_t PackageTracking::m_getTime()//return the time of the current update
 {
@@ -121,8 +130,11 @@ time_t PackageTracking::m_getTime()//return the time of the current update
 
 	return timeu;
 }
-
-string PackageTracking::m_getStatus()//return the status of the current update
+/*!
+Returns the status of the current update. Grabs the number that currentStatus holds and goes through the list using the number
+that currentStatus holds. After it is done going through the list it returns the value for the status at that location.
+*/
+string PackageTracking::m_getStatus()
 {
 	std::string status;
 	list<ShippingStatus>::iterator iter = shipList.begin();
@@ -149,8 +161,14 @@ int PackageTracking::m_getNumofUpdate() const // get the total numbers of shippi
 {
 	return total_updates;
 }
+/*!
+Prints all previous updates in the shipping chain when the package was shipped, all the way up to (but not including) 
+the current update you are viewing (may not be the most recent update)Grabs the number that currentStatus 
+holds and goes through the list using the number that currentStatus holds, returning each value along the way until
+it reaches the value of currentStatus.
+*/
 
-void PackageTracking::m_printPreviousUpdates() //print all previous updates in the shipping chain when the package was shipped, all the way up to (but not including) the current update you are viewing (may not be the most recent update)
+void PackageTracking::m_printPreviousUpdates() 
 {
 	std::list<ShippingStatus>::iterator iter = shipList.begin();
 	for (int i = 0; i < currentStatus; i++)
@@ -188,8 +206,11 @@ void PackageTracking::m_printFullTracking()//print all the updates in the tracki
 		iter++;
 	}
 }
-
-bool PackageTracking::m_setCurrent(const time_t& timeUpdated) //view an update.
+/*!
+Views an update. The function takes in a value and goes through the list until it sees that value. If it sees the value,
+it sets the currentStatus to that value. If it doesn't, function returns false.
+*/
+bool PackageTracking::m_setCurrent(const time_t& timeUpdated) 
 {
 	std::list<ShippingStatus>::iterator iter = shipList.begin();
 	//std::cout << "The time we are looking for is: " << timeUpdated << std::endl;
