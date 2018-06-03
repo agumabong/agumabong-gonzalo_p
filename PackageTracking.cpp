@@ -5,7 +5,9 @@
 //  Created by Han, Wenlin on 2/13/18.
 //  Copyright © 2018 Han, Wenlin. All rights reserved.
 //
-
+/*!
+this file is the workhorse of the project most of the actual work is done in this file
+*/
 #include "PackageTracking.h"
 #include <fstream>
 #include <sstream>
@@ -237,7 +239,9 @@ bool PackageTracking::m_setCurrent(const time_t& timeUpdated)
 	return false;
 }
 
-
+/*!
+this function reads in a file and saves it onto a list of a data structure created elsewhere 
+*/
 bool PackageTracking::m_readTrackingFile(string fileName) {
 	ifstream pList(fileName);
 	std::string data; // holds the whole line of the text file
