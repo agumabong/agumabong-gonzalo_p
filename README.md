@@ -6,6 +6,13 @@ Description:
 
 The goal of this project is to track the whole progress of a shipped package. User will be able to move through each step of the package tracking process and
 see the time, date, and location of the package at a particular step. Requires a text file to load the data from.
+this project includes 5 files needed to run as follows:
+PackageTracking.cpp	sunday 
+PackageTracking.h	
+ShippingStatus.cpp	
+ShippingStatus.h	
+TBA688567081000.txt	
+a c++ compiler is needed and runs (only tested) on visual studios 2017 version 15.3.4
 
 ---------------------------------------
 
