@@ -49,15 +49,15 @@ public:
     
 private:
 	
-	std::list<std::string> packageList;
-	std::list<ShippingStatus> shipList;
-	int currentStatus;
-	list<ShippingStatus>::iterator iter = shipList.begin();
-	int total_updates;
-	std::string location;
-	std::string status;
-	time_t pTime;
-	int timeu;
+	std::list<std::string> packageList; //list that stores the different packages
+	std::list<ShippingStatus> shipList; //list that stores the various steps of one package
+	int currentStatus; //int that keeps track of the current place in the list
+	list<ShippingStatus>::iterator iter = shipList.begin(); //iterator that starts at the front of the shipping list
+	int total_updates; //total number of updates
+	std::string location; //location of the package at the given iterator
+	std::string status; // status of the package at the given iterator
+	time_t pTime; //time of the package at the given iterator
+	int timeu; //time of the package that the user inputs
 
 };
 
