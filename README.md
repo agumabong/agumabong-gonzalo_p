@@ -32,5 +32,5 @@ text file is parsed neater using a different sort of string parsing technique.
 Credits:
 ---------------------------------------
 
-Aaron Gumabong
-Gonzalo P
+Aaron Gumabong <aarongumabong@gmail.com>
+Gonzalo Plascencia <gonzalo_p@csu.fullerton.edu>
