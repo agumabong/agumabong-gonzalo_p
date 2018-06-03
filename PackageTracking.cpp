@@ -82,10 +82,12 @@ bool PackageTracking::m_moveForward()//move iterator one step forward in time
 	}
 }
 /*!
+
 Returns the location of the current update. Grabs the number that currentStatus holds and goes through the list using the number
 that currentStatus holds. After it is done going through the list it returns the value at that location.
 */
 string PackageTracking::m_getLocation()
+
 {
 	std::string location_;
 	list<ShippingStatus>::iterator iter = shipList.begin();
@@ -161,7 +163,9 @@ int PackageTracking::m_getNumofUpdate() const // get the total numbers of shippi
 {
 	return total_updates;
 }
+
 /*!
+
 Prints all previous updates in the shipping chain when the package was shipped, all the way up to (but not including) 
 the current update you are viewing (may not be the most recent update)Grabs the number that currentStatus 
 holds and goes through the list using the number that currentStatus holds, returning each value along the way until
@@ -179,7 +183,9 @@ void PackageTracking::m_printPreviousUpdates()
 	}
 }
 
-//print all updates from the current update you are viewing to the last update in the tracking chain
+/*!
+print all updates from the current update you are viewing to the last update in the tracking chain
+*/
 void PackageTracking::m_printFollowingUpdates()
 {
 	int counter;
@@ -195,8 +201,10 @@ void PackageTracking::m_printFollowingUpdates()
 		iter++;
 	}
 }
-
-void PackageTracking::m_printFullTracking()//print all the updates in the tracking chain.
+/*!
+print all the updates in the tracking chain.
+*/
+void PackageTracking::m_printFullTracking()
 {
 	std::list<ShippingStatus>::iterator iter = shipList.begin();
 	for (int i = 0; i < total_updates; i++)
