@@ -28,7 +28,9 @@ bool testAnswer(const string &nameOfTest, const T& received, const T& expected);
 template <typename T>
 bool testArrays(const string& nameOfTest, const T& received, const T& expected, const int& size);
 
-
+/*!
+the main file is only to test that the data structure is functioning
+*/
 int main() {
     // Test only ShippingStatus class
     ShippingStatus testStatus01("Package has left seller facility and is in transit to carrier", "N/A", 1515978000);
@@ -97,7 +99,9 @@ int main() {
 	return 1;
 }
 
-
+/*!
+function created to test whether the output is correct
+*/
 template <typename T>
 bool testAnswer(const string &nameOfTest, const T& received, const T& expected) {
     if (received == expected) {
@@ -107,7 +111,9 @@ bool testAnswer(const string &nameOfTest, const T& received, const T& expected) 
     cout << "FAILED " << nameOfTest << ": expected " << expected << " but received " << received << endl;
     return false;
 }
-
+/*!
+function to test the arrays created
+*/
 template <typename T>
 bool testArrays(const string& nameOfTest, const T& received, const T& expected, const int& size) {
     for(int i = 0; i < size; i++) {
