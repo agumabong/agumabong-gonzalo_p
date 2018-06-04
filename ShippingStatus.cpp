@@ -7,7 +7,9 @@
 //
 
 #include "ShippingStatus.h"
-
+/*!
+these are function definitions, they were declared in a separate header file
+*/
 ShippingStatus::ShippingStatus() {//default constructor. Will set values to zero on initialization. Test commit
 	status_ = "";
 	location_ = "";
