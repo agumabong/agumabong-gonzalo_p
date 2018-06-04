@@ -14,7 +14,9 @@
 
 #include <string>
 using namespace std;
-
+/*!
+this class is simply for function declarations, they are defined in another file
+*/
 class ShippingStatus {
 public:
 	ShippingStatus();
